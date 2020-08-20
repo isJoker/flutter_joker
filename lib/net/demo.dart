@@ -1,20 +1,41 @@
 import 'package:flutter/material.dart';
 
-class Demo1 extends StatefulWidget {
+class RouteDemo1 extends StatefulWidget {
+  final String text;
+
+  RouteDemo1({Key key, this.text}) : super(key: key);
+
   @override
-  _Demo1State createState() => new _Demo1State();
+  _RouteDemo1State createState() => new _RouteDemo1State(text: this.text);
 }
 
-class _Demo1State extends State<Demo1> {
+class _RouteDemo1State extends State<RouteDemo1> {
+  _RouteDemo1State({Key key, @required this.text}) : super();
+  final String text;
+
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
+    var args = ModalRoute.of(context).settings.arguments;
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Colors.red,
-        title: new Text("demo"),
+        title: Text("demo"),
       ),
-      body: new Center(
-        child: new Text("hello world"),
+      body: Center(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Text(args),
+              ),
+              RaisedButton(
+                onPressed: () => Navigator.pop(context, "Demo1页面返回值"),
+                child: Text("返回"),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_joker/anim/animationPage.dart';
+import 'package:flutter_joker/button/button_test.dart';
 import 'package:flutter_joker/container_page.dart';
 import 'package:flutter_joker/msg/edit_text_page.dart';
 import 'package:flutter_joker/grid_demo_page.dart';
@@ -9,6 +10,14 @@ import 'package:flutter_joker/listview_demo_page.dart';
 import 'package:flutter_joker/listview_loadmore.dart';
 import 'package:flutter_joker/msg/message_list_page.dart';
 import 'package:flutter_joker/net/main_page.dart';
+import 'package:flutter_joker/test/test_stateful_widget.dart';
+
+import 'check/check_demo.dart';
+import 'icon/icon_demo.dart';
+import 'image/image_demo.dart';
+import 'input/form_page.dart';
+import 'input/input_page.dart';
+import 'text/text_domo.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,11 +26,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Test',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+          primaryColor: Colors.green[800]
       ),
-      home: MainPage(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('测试'),
+        ),
+        body: Center(
+          child: FormPage(),
+        ),
+      ),
     );
   }
 }
@@ -33,10 +49,10 @@ class MyHomePage extends StatelessWidget {
     /**
      * -------------------------- Offstage ----------------------------
      */
-    return new Offstage(
+    /*return new Offstage(
       offstage: false, // true : 不绘制
       child: new Text('test offstage'),
-    );
+    );*/
 
     /**
      * -------------------------- Stack ----------------------------
@@ -134,10 +150,12 @@ class MyHomePage extends StatelessWidget {
       ],
     );*/
 
+
+
     /**
      * -------------------------- Text ----------------------------
      */
-    /*return new Text(
+    /*new Text(
       "hello flutter",
       textAlign: TextAlign.center,
       style: TextStyle(
@@ -149,7 +167,7 @@ class MyHomePage extends StatelessWidget {
     /**
      * -------------------------- Container ----------------------------
      */
-    /*return new Container(
+    return new Container(
       alignment: Alignment.center,
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.all(30.0),
@@ -172,6 +190,6 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       child: Text('哈哈哈哈哈哈'),
-    );*/
+    );
   }
 }

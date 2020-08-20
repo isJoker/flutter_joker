@@ -91,29 +91,29 @@ class HttpEchoServer {
   }
 
   void _echo(HttpRequest request) async {
-    if (request.method != POST) {
-      _unsupportedMethod(request);
-      return;
-    }
-
-    // 获取从客户端 post 请求的 body，更多的知识，参考
-    // https://www.dartlang.org/tutorials/dart-vm/httpserver
-    String body = await request.transform(utf8.decoder).join();
-    if (body != null) {
-      var message = Message.create(body);
-      messages.add(message);
-      request.response.statusCode = HttpStatus.ok;
-      // json 是 convert 包里的对象，encode 方法还有第二个参数 toEncodable。当遇到对象不是
-      // Dart 的内置对象时，如果提供这个参数，就会调用它对对象进行序列化；这里我们没有提供，
-      // 所以 encode 方法会调用对象的 toJson 方法，这个方法在前面我们已经定义了
-      var data = json.encode(message);
-      // 把响应写回给客户端
-      request.response.write(data);
-      _storeMessage(message);
-    } else {
-      request.response.statusCode = HttpStatus.badRequest;
-    }
-    request.response.close();
+//    if (request.method != POST) {
+//      _unsupportedMethod(request);
+//      return;
+//    }
+//
+//    // 获取从客户端 post 请求的 body，更多的知识，参考
+//    // https://www.dartlang.org/tutorials/dart-vm/httpserver
+//    String body = await request.transform(utf8.decoder).join();
+//    if (body != null) {
+//      var message = Message.create(body);
+//      messages.add(message);
+//      request.response.statusCode = HttpStatus.ok;
+//      // json 是 convert 包里的对象，encode 方法还有第二个参数 toEncodable。当遇到对象不是
+//      // Dart 的内置对象时，如果提供这个参数，就会调用它对对象进行序列化；这里我们没有提供，
+//      // 所以 encode 方法会调用对象的 toJson 方法，这个方法在前面我们已经定义了
+//      var data = json.encode(message);
+//      // 把响应写回给客户端
+//      request.response.write(data);
+//      _storeMessage(message);
+//    } else {
+//      request.response.statusCode = HttpStatus.badRequest;
+//    }
+//    request.response.close();
   }
 
   void _storeMessage(Message msg) {

@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
     return new MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
-          "/demo1": (BuildContext context) => new Demo1(),
+          "/demo1": (BuildContext context) => new RouteDemo1(),
         },
         home: new MainPageWidget());
   }
