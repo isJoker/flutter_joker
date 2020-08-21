@@ -15,8 +15,17 @@ import 'package:flutter_joker/test/test_stateful_widget.dart';
 import 'check/check_demo.dart';
 import 'icon/icon_demo.dart';
 import 'image/image_demo.dart';
+import 'indicator/indicator_demo.dart';
+import 'indicator/progress_demo.dart';
 import 'input/form_page.dart';
 import 'input/input_page.dart';
+import 'layout/align_demo.dart';
+import 'layout/center_demo.dart';
+import 'layout/expanded_demo.dart';
+import 'layout/follow_demo.dart';
+import 'layout/row_demo.dart';
+import 'layout/stack_dome.dart';
+import 'layout/wrap_demo.dart';
 import 'text/text_domo.dart';
 
 void main() => runApp(MyApp());
@@ -35,7 +44,7 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: FormPage(),
+          child: CenterPage(),
         ),
       ),
     );
