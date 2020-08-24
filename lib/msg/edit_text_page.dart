@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_joker/Toast.dart';
+import 'package:flutter_joker/util/Toast.dart';
 
 class MessageFormPage extends StatefulWidget {
   @override

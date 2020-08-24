@@ -34,13 +34,14 @@ class _GridDemo1PageState extends State<GridDemo1Page> {
 
   Widget buildGrid() {
     // 指定子项占据的最大宽度
-    /*return new GridView.extent(
-      maxCrossAxisExtent: 200.0,
+    return new GridView.extent(
+      maxCrossAxisExtent: 120.0,
       padding: const EdgeInsets.all(15.0),
       mainAxisSpacing: 4.0,
       crossAxisSpacing: 4.0,
+      childAspectRatio: 0.5,
       children: _buildGridTileList(30),
-    );*/
+    );
 
     // 指定列数
     var countGrid = GridView.count(

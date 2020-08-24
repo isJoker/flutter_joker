@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_joker/anim/animationPage.dart';
-import 'package:flutter_joker/button/button_test.dart';
-import 'package:flutter_joker/container_page.dart';
-import 'package:flutter_joker/msg/edit_text_page.dart';
-import 'package:flutter_joker/grid_demo_page.dart';
-import 'package:flutter_joker/listview_demo2_page.dart';
-import 'package:flutter_joker/listview_card_page.dart';
-import 'package:flutter_joker/listview_demo_page.dart';
-import 'package:flutter_joker/listview_loadmore.dart';
-import 'package:flutter_joker/msg/message_list_page.dart';
-import 'package:flutter_joker/net/main_page.dart';
-import 'package:flutter_joker/test/test_stateful_widget.dart';
 
 import 'check/check_demo.dart';
 import 'clip/clip_demo.dart';
 import 'container/container_demo.dart';
+import 'list/custom_scroll_view.dart';
+import 'list/grid_builder_demo.dart';
+import 'list/grid_demo_page.dart';
 import 'icon/icon_demo.dart';
 import 'image/image_demo.dart';
 import 'indicator/indicator_demo.dart';
@@ -28,6 +19,9 @@ import 'layout/follow_demo.dart';
 import 'layout/row_demo.dart';
 import 'layout/stack_dome.dart';
 import 'layout/wrap_demo.dart';
+import 'list/scroll_listener.dart';
+import 'list/scroll_notification.dart';
+import 'list/staggered_grid_view.dart';
 import 'scaffold/scaffold_demo.dart';
 import 'text/text_domo.dart';
 
@@ -47,10 +41,10 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: ClipRoute(),
+          child: ScrollNotificationTestRoute(),
         ),
       ),
-//      home: ScaffoldRoute(),
+//      home: ScrollNotificationTestRoute(),
     );
   }
 }

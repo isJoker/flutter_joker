@@ -10,6 +10,7 @@ class ListViewLoadMorePage extends StatefulWidget {
 class _ListViewLoadMorePageState extends State<ListViewLoadMorePage> {
   List<int> items = List.generate(20, (i) => i);
   ScrollController _scrollController = new ScrollController();
+
   // 是否正在请求
   bool isPerformingRequest = false;
 
@@ -68,21 +69,27 @@ class _ListViewLoadMorePageState extends State<ListViewLoadMorePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-        title: Text("Infinite ListView"),
-      ),
-      body: ListView.builder(
-        itemCount: items.length + 1,
-        itemBuilder: (context, index) {
-          if (index == items.length) {
-            return _buildProgressIndicator();
-          } else {
-            return ListTile(title: new Text("Number $index"));
-          }
-        },
-        controller: _scrollController,
-      ),
-    );
+        appBar: AppBar(
+          title: Text("Infinite ListView"),
+        ),
+        body: Column(
+          children: [
+            ListTile(title: Text('标题'),),
+            Expanded(
+              child: ListView.builder(
+                itemCount: items.length + 1,
+                itemBuilder: (context, index) {
+                  if (index == items.length) {
+                    return _buildProgressIndicator();
+                  } else {
+                    return ListTile(title: new Text("Number $index"));
+                  }
+                },
+                controller: _scrollController,
+              ),
+            )
+          ],
+        ));
   }
 }
 
