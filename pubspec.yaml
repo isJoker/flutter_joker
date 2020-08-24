@@ -57,8 +57,12 @@ flutter:
   - assets/images/ic_msg_press.png
   - assets/images/ic_my_normal.png
   - assets/images/ic_my_press.png
-  -
+
   - assets/images/icon1.png
+  - assets/images/icon2.png
+  - assets/images/icon3.png
+  - assets/images/icon4.png
+  - assets/images/icon5.png
 
 
   # To add assets to your application, add an assets section, like this:

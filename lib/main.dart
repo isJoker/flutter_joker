@@ -13,6 +13,8 @@ import 'package:flutter_joker/net/main_page.dart';
 import 'package:flutter_joker/test/test_stateful_widget.dart';
 
 import 'check/check_demo.dart';
+import 'clip/clip_demo.dart';
+import 'container/container_demo.dart';
 import 'icon/icon_demo.dart';
 import 'image/image_demo.dart';
 import 'indicator/indicator_demo.dart';
@@ -26,6 +28,7 @@ import 'layout/follow_demo.dart';
 import 'layout/row_demo.dart';
 import 'layout/stack_dome.dart';
 import 'layout/wrap_demo.dart';
+import 'scaffold/scaffold_demo.dart';
 import 'text/text_domo.dart';
 
 void main() => runApp(MyApp());
@@ -44,9 +47,10 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: CenterPage(),
+          child: ClipRoute(),
         ),
       ),
+//      home: ScaffoldRoute(),
     );
   }
 }
