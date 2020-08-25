@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'check/check_demo.dart';
 import 'clip/clip_demo.dart';
 import 'container/container_demo.dart';
+import 'func/will_pop_scope_demo.dart';
 import 'list/custom_scroll_view.dart';
 import 'list/grid_builder_demo.dart';
 import 'list/grid_demo_page.dart';
@@ -23,6 +24,8 @@ import 'list/scroll_listener.dart';
 import 'list/scroll_notification.dart';
 import 'list/staggered_grid_view.dart';
 import 'scaffold/scaffold_demo.dart';
+import 'state/inherited_widget_demo.dart';
+import 'state/test_provider_impl_demo.dart';
 import 'text/text_domo.dart';
 
 void main() => runApp(MyApp());
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: ScrollNotificationTestRoute(),
+          child: ProviderRoute(),
         ),
       ),
 //      home: ScrollNotificationTestRoute(),
