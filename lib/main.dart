@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'check/check_demo.dart';
 import 'clip/clip_demo.dart';
 import 'container/container_demo.dart';
+import 'dialog/dialog_demo.dart';
 import 'func/will_pop_scope_demo.dart';
+import 'future/future_demo.dart';
+import 'future/stream_builder_demo.dart';
 import 'list/custom_scroll_view.dart';
 import 'list/grid_builder_demo.dart';
 import 'list/grid_demo_page.dart';
@@ -27,6 +30,7 @@ import 'scaffold/scaffold_demo.dart';
 import 'state/inherited_widget_demo.dart';
 import 'state/test_provider_impl_demo.dart';
 import 'text/text_domo.dart';
+import 'theme/theme_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,10 +48,10 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: ProviderRoute(),
+          child: DialogTestRoute(),
         ),
       ),
-//      home: ScrollNotificationTestRoute(),
+//      home: ThemeTestRoute(),
     );
   }
 }
