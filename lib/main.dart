@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'anim/animated_switcher_demo.dart';
+import 'anim/animated_widget_demo.dart';
+import 'anim/hero_animation.dart';
+import 'anim/scale_animation.dart';
+import 'anim/stagger_animation.dart';
 import 'check/check_demo.dart';
 import 'clip/clip_demo.dart';
 import 'container/container_demo.dart';
@@ -52,7 +57,7 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: NotificationRoute(),
+          child: AnimatedWidgetsTest(),
         ),
       ),
 //      home: ThemeTestRoute(),
