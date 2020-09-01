@@ -16,10 +16,12 @@ import 'dialog/dialog_demo.dart';
 import 'event/custom_notification_demo.dart';
 import 'event/notification_demo.dart';
 import 'event/pointer_event_demo.dart';
+import 'file/file_demo.dart';
 import 'func/will_pop_scope_demo.dart';
 import 'future/future_demo.dart';
 import 'future/stream_builder_demo.dart';
 import 'gesture/gesture_dome.dart';
+import 'http/http_demo.dart';
 import 'list/custom_scroll_view.dart';
 import 'list/grid_builder_demo.dart';
 import 'list/grid_demo_page.dart';
@@ -61,10 +63,10 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: GradientCircularProgressRoute(),
+          child: HttpTestRoute(),
         ),
       ),
-//      home: ThemeTestRoute(),
+//      home: FileOperationRoute(),
     );
   }
 }
