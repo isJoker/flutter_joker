@@ -8,6 +8,10 @@ import 'anim/stagger_animation.dart';
 import 'check/check_demo.dart';
 import 'clip/clip_demo.dart';
 import 'container/container_demo.dart';
+import 'custom/custom_paint.dart';
+import 'custom/gradient_button.dart';
+import 'custom/gradient_circle_progress_demo.dart';
+import 'custom/turn_box.dart';
 import 'dialog/dialog_demo.dart';
 import 'event/custom_notification_demo.dart';
 import 'event/notification_demo.dart';
@@ -57,7 +61,7 @@ class MyApp extends StatelessWidget {
           title: Text('测试'),
         ),
         body: Center(
-          child: AnimatedWidgetsTest(),
+          child: GradientCircularProgressRoute(),
         ),
       ),
 //      home: ThemeTestRoute(),
